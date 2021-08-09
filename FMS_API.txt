@@ -1,0 +1,199 @@
+::Authorization::
+======================================================
+SignUp(POST):- http://localhost:8121/auth/signup
+
+{
+    "username": "Joy@989",
+    "password": "Joysurjya@98"
+}
+
+LogIn(GET):- http://localhost:8121/auth/login
+
+{
+    "username": "Joy@98",
+    "password": "Joysurjya@98"
+}
+
+Delete(POST):- http://localhost:8121/auth/delete/****ID*****
+
+
+
+
+::Admin::
+=======================================================
+Add Admin(POST):- http://localhost:8121/fms/admin/add
+
+{
+    "adminName" : "John Stones",
+    "adminUserName" : "Wick@1234",
+    "adminPassword" : "John@123"
+}
+
+Update Admin(PUT):- http://localhost:8121/fms/admin/update/*****ID*****
+
+{
+    "adminName" : "John Walker",
+    "adminUserName" : "Wick@1234",
+    "adminPassword" : "John@1234"
+}
+
+Delete Admin(DELETE):- http://localhost:8121/fms/admin/delete/*****ID*****
+View All Admins(GET):- http://localhost:8121/fms/admin/viewall
+View Admin By Id(GET):- http://localhost:8121/fms/admin/viewbyid/**ID**
+
+
+
+
+::Participant::
+========================================================
+Add Participant(POST):- http://localhost:8121/fms/participant/add
+
+{
+    "participantName" : "Joysurjya Bera",
+    "participantUserName" : "Participant@123",
+    "participantPassword" : "Joysurjya@10"
+}
+
+Update Participant(PUT):- http://localhost:8121/fms/participant/update/***ID***
+
+{
+    "participantName" : "Joy Bera",
+    "participantUserName" : "Participant@123",
+    "participantPassword" : "Joysurvhjhjfjhf@10"
+}
+
+Delete Participant(DELETE):- http://localhost:8121/fms/participant/delete/***ID***
+View All Participants(GET):- http://localhost:8121/fms/participant/viewall
+View By Participant Id(GET):- http://localhost:8121/fms/participant/viewbyid/***ID***
+
+
+
+
+::Trainer::
+=========================================================
+Add Trainer(POST):- http://localhost:8121/fms/trainer/add
+
+{
+    "trainerId":"TR001",
+    "trainerName": "Swapna",
+    "trainerUserName": "Swapna@1234",
+    "trainerPassword" : "Capgemini@2021",
+    "skill":"Java, Angular, Spring, Hibernate",
+    "feedbackList":[]
+}
+
+Update Trainer(PUT):- http://localhost:8121/fms/trainer/update/****ID****
+
+{
+    "trainerId":"TR001",
+    "trainerName": "Swapna",
+    "trainerUserName": "Swapna@1234",
+    "trainerPassword" : "Capgemini@21",
+    "skill":"Java, Angular, Spring, Python",
+    "feedback":[]
+}
+
+Delete Trainer(DELETE):- http://localhost:8121/fms/trainer/delete/****ID****
+View All Trainers(GET):- http://localhost:8121/fms/trainer/viewall
+View By Trainer Id(GET):- http://localhost:8121/fms/trainer/viewbyid/***ID***
+
+
+
+
+::Course::
+==========================================================
+Add Course(POST):- http://localhost:8121/fms/course/add
+
+{
+    "courseId" : "CS001",
+    "courseName" : "Java",
+    "courseDescription" : "Core Java with Spring Framework",
+    "noOfDays" : "28",
+    "prgId" : "PR001"
+}
+
+Update Course(PUT):- http://localhost:8121/fms/course/update/****ID****
+
+{
+    "courseName" : "DS",
+    "courseDescription" : "Data Structure Using C",
+    "noOfDays" : "15"
+}
+
+Delete Course(DELETE):- http://localhost:8121/fms/course/delete/****ID****
+View All Courses(GET):- http://localhost:8121/fms/course/getall
+View By Course Id(GET):- http://localhost:8121/fms/course/getbyid/****ID****
+
+
+
+
+::Feedback::
+===========================================================
+Add Feedback(POST):- http://localhost:8121/fms/feedback/add
+
+{
+    "prgId" : "PR001",
+    "trnrId" : "TR001",
+    "feedbackCriteria1" : 5,
+    "feedbackCriteria2" : 5,
+    "feedbackCriteria3" : 5,
+    "feedbackCriteria4" : 4,
+    "feedbackCriteria5" : 5,
+    "comments" : "nil",
+    "suggestions" : "nil"
+}
+
+Update Feedback(PUT):- http://localhost:8121/fms/feedback/update/****FeedbackID****
+
+{
+    "prgId" : "PR002",
+    "trainerId" : "TR001",
+    "feedbackCriteria1" : 4,
+    "feedbackCriteria2" : 4,
+    "feedbackCriteria3" : 4,
+    "feedbackCriteria4" : 5,
+    "feedbackCriteria5" : 4,
+    "comments" : "nil",
+    "suggestions" : "nil"
+}
+
+View By Trainer(GET):- http://localhost:8121/fms/feedback/getbytrainer/***TrainerID***
+View By Program(GET):- http://localhost:8121/fms/feedback/getbyprogram/***ProgramID***
+
+
+
+
+::Program::
+============================================================
+Add Program(POST):- http://localhost:8121/fms/program/add
+
+{
+    "programId" : "PR001",
+    "programName" : "Java Testing",
+    "startDate" : "03-08-2021",
+    "endDate" : "01-09-2021",
+    "tId" : "TR004",
+    "courseList" : [],
+    "feedbackList" : []
+}
+
+Update Program(PUT):- http://localhost:8121/fms/program/update/***ProgramID***
+
+{
+    "programId" : "PR001",
+    "programName" : "J2EEFSD with Angular",
+    "startDate" : "02-08-2021",
+    "endDate" : "05-09-2021",
+    "tId" : "TR005",
+    "courseList" : [],
+    "feedbackList" : []
+}
+
+Delete Program(DELETE):- http://localhost:8121/fms/program/delete/****ProgramID****
+View All Programs(GET):- http://localhost:8121/fms/program/getall
+View By Program Id(GET):- http://localhost:8121/fms/program/getbyid/***ProgramID***
+View By Start Date(GET):- http://localhost:8121/fms/program/getbysdate/***StartDate***
+View By Trainer(GET): http://localhost:8121/fms/program/getbytrainer/****TrainerID****
+
+
+

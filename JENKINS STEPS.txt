@@ -1,0 +1,21 @@
+USING JENKINS 
+==============
+1. search for the jenkins.war file then open cmd in the folder where 
+jenkins.war is present.
+2. now in the cmd type
+	java -jar jenkins.war --httpPort=**the port number you have set in tomcat**
+	[I have used tomcat 9 so port will be 9080]
+3. now let the jenkins start it can take a few minutes
+4. it will show running successfully
+5. then open google and type localhost:portNumber
+	for me it will be, localhost:9080
+6. jenkins wesite appears now enter username and password set by you
+	for me it will be, username=Neha and password=Mish@8697
+7. now you will see your dashboard
+8. push your code in git
+9. press on new item and select freestyle project
+10. now select git and enter the url there. 
+11. Set Poll SCM to H * * * * this means per hour
+12. click on save
+13. now press on build now
+14. click on green right button to see console output.
